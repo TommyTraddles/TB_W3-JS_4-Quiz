@@ -1,3 +1,11 @@
+##### Ejercicio
+
+## ⚔️ Quiz
+
+En base a [este Repositorio](https://github.com/TheBridge-FullStackDeveloper/proyectos-quiz).
+
+Resultado: [GitHub page](https://tommytraddles.github.io/TB_W3-JS_4-Quiz/).
+
 
 
 ## Metodología
