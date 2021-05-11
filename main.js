@@ -107,13 +107,15 @@ let user_score = 0;
 let startQuiz = () => {
 	home_page.style.display = 'none';
 	question_page.style.display = 'block';
+	results_button_give.innerHTML = 'Give up';
 	showQuestions(0);
 };
 
-function easterEgg(){
+// 66)) 
+function easterEgg1() {
 	console.log('> EasterEgg1: hola')
-	home_button_wait.innerHTML = "Ok… I’ll wait";
-
+	home_button_wait.innerHTML = "Ok… we’ll wait ⏳";
+	home_button_wait.classList.add("wait")
 };
 
 
@@ -153,7 +155,7 @@ function optionSelected(answer) {
 		console.log('> Answer: Answer is correct');
 		user_score += 1;
 		console.log('> User score: ' + user_score)
-		
+
 	} else {
 		answer.classList.add('wrong')
 		question_button_default.classList.add('btn--wrong')
@@ -202,41 +204,38 @@ function showResultBox() {
 	} else {
 		let result_tag = '<p>' + user_score + ' 🥲 of ' + questions.length + '</p>';
 		results_score.innerHTML = result_tag;
-		
+
 	}
 };
 
 // 06) RECARGAR LA PÁGINA
-function reload(){
+function reload() {
 	window.location.reload();
 };
 
-function easterEgg2(){
+// 66) 
+function easterEgg2() {
 	console.log('> EasterEgg2: ciao')
-	results_button_give.innerHTML = "Take me to 🏡";
+	results_button_give.innerHTML = "About time ☠️";
+	results_button_give.classList.add("death")
 };
-
 
 
 // --------------------------- Eventos 
 
+// Navegación
 home_button_start.addEventListener('click', startQuiz);
 question_button_default.addEventListener('click', nextQuestion);
 results_button_try.addEventListener('click', reload);
+// Easter Egg
+home_button_wait.addEventListener('click', easterEgg1);
 results_button_give.addEventListener('click', easterEgg2);
-home_button_wait.addEventListener('click', easterEgg2);
-
-
-showQuestions();
 
 
 // ---------------------------- Lottie
 
-
 // home_button_wait
 // home_image_lottie
-
-
 
 // const animation_lotie = bodymovin.loadAnimation({
 // 	wrapper: home_image_lottie,

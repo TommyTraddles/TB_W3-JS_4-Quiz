@@ -54,6 +54,11 @@ button,
 	border-radius: 5px;
 	margin: 10px auto;
 	cursor: pointer;
+	transition: all .2s ease-in-out;
+}
+button:hover{
+	/* transform: translate(0px, -5px); */
+	transform: scale(1.05);
 }
 
 
@@ -105,16 +110,9 @@ button,
 	margin: 100px auto 0;
 	opacity: 0.1;
 }
-
 .home__image-lottie{
 	/* display: none; */
 }
-
-hide{
-	display: none;
-}
-
-
 .home__title{
 	color: var(--black-light);
 	font-size: var(--fs-home-title);
@@ -134,6 +132,7 @@ hide{
 }
 .home__button-start:hover{
 	background-color: var(--blue-dark);
+	/* transform: translate(0px, -2px); */
 }
 .home__button-wait{
 	border: 1px solid var(--blue);
@@ -144,6 +143,10 @@ hide{
 }
 .home__button-wait:hover{
 	background-color: var(--blue-light);
+	/* transform: translate(0px, -2px); */
+}
+.wait{
+	cursor: wait;
 }
 .home__footer{
 	color: var(--black-light);
@@ -151,7 +154,15 @@ hide{
 	font-weight: var(--regular);
 	margin: 44px auto;
 }
-
+.home__footer a{
+	text-decoration: none;
+	color: var(--black-light);
+	transition: all .2s ease-in-out;
+}
+.home__footer a:hover{
+	color:var(--blue);
+	font-size: 20px;
+}
 
 
 
@@ -182,14 +193,12 @@ hide{
 	background-color: var(--blue-light);
 	border: 1px solid var(--blue);
 }
+/* ------------- cajas */
 /* .pressed{
 		border: 2px solid var(--blue);
 		box-shadow: 0px 1px 8px 2px rgba(0, 0, 0, 0.1);
 } */
 
-.disabled{
-	pointer-events: none;
-}
 .correct{
 	border: 2px solid var(--green);
 	background-color: var(--green-light);
@@ -200,6 +209,10 @@ hide{
 	background-color: var(--red-light);
 	box-shadow: 0px 1px 8px 2px rgba(253, 77, 60, 0.1);
 }
+.disabled{
+	pointer-events: none;
+}
+/* ------------ btn */
 .question__button--default{
 	display: none;
 	background-color: var(--blue);
@@ -210,6 +223,8 @@ hide{
 .question__button--default:hover{
 	background-color: var(--blue-dark);
 }
+/* ------------ btn-states */
+
 .btn--correct{
 	display: none;
 	border: none;
@@ -281,6 +296,11 @@ hide{
 .results__button-give:hover{
 	background-color: var(--blue-light);
 }
+.death{
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
 .results__secret-image{
 	background-color: var(--red);
 	height: 120px;
