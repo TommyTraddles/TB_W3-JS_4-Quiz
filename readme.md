@@ -17,17 +17,18 @@
 - Animaciones (final)
 
 **JS**
-- Crear array de objetos con preguntas
+- Crear array [] de objetos con preguntas {}
 - Definir selectores
+- Crear variables globales
 - Crear eventos
 - Crear funciones
+    - Inciar el quiz
     - Obtener objeto {}
     - Reflejar en HTML <>
     - Seleccionar respuesta
     - Validar e imprimir respuestas
-    - Navegación
-    - Quiz y contador
-    - Score final
+    - Navegación entre preguntas y pantallas
+    - Imprimir score final
     - 'Easter eggs'
 
 
