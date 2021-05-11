@@ -84,7 +84,10 @@ button:hover{
 	.question,
 	.results
 	{
-		width: 746px;
+		width: 750px;
+	}
+	button{
+		margin: 5px;
 	}
 	.question__list{
 		display: flex;
