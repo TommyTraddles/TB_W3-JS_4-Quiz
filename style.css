@@ -1,0 +1,290 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+	/* Color */
+	--blue: #3395FF; 
+	--blue-dark: #1e6cc0; 
+	--blue-light: #EAF4FF; 
+	--green: #71F1C4;
+	--green-dark: #2bb786;
+	--green-light: #F0FEF9;
+	--red: #FD4D3C;
+	--red-dark: #ab281c;
+	--red-light: #FEEDEB;
+	--black: #141C3A;
+	--black-light: #BCC1D5;
+	--white: #fff;
+
+	/* Font */
+	--fs-home-title: 46px;
+	--fs-home-footer: 16px;
+	--fs-question-number: 24px;
+	--fs-question-title: 18px;
+	--fs-question-option: 16px;
+	--fs-result-legend: 27px;
+	--fs-result-score: 74px;
+	--fs-button: 18px;
+
+	/* Weigths */
+	--bold: 700;
+	--semibold: 600;
+	--regular: 400;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Nunito', sans-serif;
+}
+.home,
+.question,
+.results{
+	width: 85%;
+	margin: 0 auto;
+	align-content: center;
+	text-align: center;
+}
+button,
+.question__option{
+	border: none;
+	text-decoration: none;
+	height: 80px;
+	width: 100%;
+	border-radius: 5px;
+	margin: 10px auto;
+	cursor: pointer;
+}
+
+
+
+/* ------------------- Responsive */
+@media only screen and (min-width: 414px) {
+	button,
+	.question__option{
+		width: 356px;
+	}
+}
+@media only screen and (min-width: 768px) {
+	.home,
+	.results{
+		width: 356px;
+	}
+	.question{
+		width: 500px;
+	}
+}
+@media only screen and (min-width: 1280px) {
+	.home,
+	.question,
+	.results
+	{
+		width: 746px;
+	}
+	.question__list{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.question__button > button{
+		width: 730px;
+	}
+}
+
+
+
+
+/* ------------------- Primera pantalla */
+.home{
+	/* display: none; */
+}
+.home__image{
+	background-color: var(--red);
+	height: 170px;
+	width: 150px;
+	margin: 100px auto 0;
+	opacity: 0.1;
+}
+
+.home__image-lottie{
+	/* display: none; */
+}
+
+hide{
+	display: none;
+}
+
+
+.home__title{
+	color: var(--black-light);
+	font-size: var(--fs-home-title);
+	font-weight: var(--semibold);
+	line-height: 54px;
+	text-align: center;
+	margin: 30px auto 75px;
+}
+.home__title span{
+	color: var(--black)
+}
+.home__button-start{
+	background-color: var(--blue);
+	color: var(--white);
+	font-size: var(--fs-button);
+	font-weight: var(--bold);
+}
+.home__button-start:hover{
+	background-color: var(--blue-dark);
+}
+.home__button-wait{
+	border: 1px solid var(--blue);
+	background-color: var(--white);
+	color: var(--blue);
+	font-size: var(--fs-button);
+	font-weight: var(--bold);
+}
+.home__button-wait:hover{
+	background-color: var(--blue-light);
+}
+.home__footer{
+	color: var(--black-light);
+	font-size: var(--fs-home-footer);
+	font-weight: var(--regular);
+	margin: 44px auto;
+}
+
+
+
+
+
+/* ------------------- Segunda pantalla */
+.question{
+	display: none;
+}
+.question__number{
+	font-size: var(	--fs-question-number);
+	font-weight: var(--bold);
+	margin: 100px auto 0px;
+}
+.question__title{
+	font-size: var(--fs-question-title);
+	margin: 40px auto;
+}
+.question__option{
+	border: 1px solid var(--black-light);
+	font-size: var(--fs-question-option);
+	font-weight: var(--regular);
+	/* Contenido */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.question__option:hover{
+	background-color: var(--blue-light);
+	border: 1px solid var(--blue);
+}
+/* .pressed{
+		border: 2px solid var(--blue);
+		box-shadow: 0px 1px 8px 2px rgba(0, 0, 0, 0.1);
+} */
+
+.disabled{
+	pointer-events: none;
+}
+.correct{
+	border: 2px solid var(--green);
+	background-color: var(--green-light);
+	box-shadow: 0px 1px 8px 2px rgba(109, 240, 194, 0.1);
+}
+.wrong{
+	border: 2px solid var(--red);
+	background-color: var(--red-light);
+	box-shadow: 0px 1px 8px 2px rgba(253, 77, 60, 0.1);
+}
+.question__button--default{
+	display: none;
+	background-color: var(--blue);
+	color: var(--white);
+	font-size: var(--fs-button);
+	font-weight: var(--bold);
+}
+.question__button--default:hover{
+	background-color: var(--blue-dark);
+}
+.btn--correct{
+	display: none;
+	border: none;
+	background-color: var(--green);
+	color: var(--white);
+	font-size: var(--fs-button);
+	font-weight: var(--bold);
+}
+.btn--correct:hover{
+	background-color: var(--green-dark);
+}
+.btn--wrong{
+	display: none;
+	border: none;
+	background-color: var(--red);
+	color: var(--white);
+	font-size: var(--fs-button);
+	font-weight: var(--bold);
+}
+.btn--wrong:hover{
+	background-color: var(--red-dark);
+}
+
+
+
+
+/* ------------------- Tercera pantalla */
+.results{
+	display: none;
+}
+.results__image{
+	background-color: var(--red);
+	height: 120px;
+	width: 150px;
+	margin: 90px auto 0;
+	opacity: 0.1;
+}
+.results__title{
+	font-size: var(--fs-result-legend);
+	font-weight: var(--semibold);
+	color: var(--black-light);
+	margin: 30px auto;
+}
+.results__title span{
+	color: var(--black);
+}
+.results__score{
+	font-size: var(--fs-result-score);
+	font-weight: var(--bold);
+	margin-bottom: 60px;
+
+}
+.results__button-try{
+	background-color: var(--blue);
+	color: var(--white);
+	font-size: var(--fs-button);
+	font-weight: var(--bold);
+}
+.results__button-try:hover{
+	background-color: var(--blue-dark);
+}
+.results__button-give{
+	border: 1px solid var(--blue);
+	background-color: var(--white);
+	color: var(--blue);
+	font-size: var(--fs-button);
+	font-weight: var(--bold);
+}
+.results__button-give:hover{
+	background-color: var(--blue-light);
+}
+.results__secret-image{
+	background-color: var(--red);
+	height: 120px;
+	width: 200px;
+	opacity: 0.1;
+	margin: auto;
+}
